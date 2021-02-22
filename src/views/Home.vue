@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="home">
+    <div id="set-list-wrapper">
+      <SetList />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import SetList from "@/components/SetList.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    SetList
   }
 };
 </script>
+
+<style lang="scss" scoped>
+#home {
+  height: calc(100% - #{$header-height});
+  overflow: auto;
+}
+
+#set-list-wrapper {
+  height: 100%;
+  position: relative;
+}
+</style>
