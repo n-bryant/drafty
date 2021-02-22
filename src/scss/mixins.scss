@@ -1,3 +1,5 @@
+/*  Media
+ *  ─────────────────────────────────── */
 // Small devices
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
@@ -31,4 +33,14 @@
   @media (min-width: $screen+"px") {
     @content;
   }
+}
+
+/*  Transitions
+ *  ─────────────────────────────────── */
+@mixin colorShift {
+  transition: color 0.25s ease;
+}
+
+@mixin fillShift {
+  transition: fill 0.25s ease;
 }
