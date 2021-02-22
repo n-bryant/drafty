@@ -1,0 +1,55 @@
+/*  Breakpoints
+ *  ─────────────────────────────────── */
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+/*  Spacings
+ *  ─────────────────────────────────── */
+// general
+$spacing-0: 0;
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+$spacing-7: 28px;
+$spacing-8: 32px;
+$spacing-9: 36px;
+$spacing-10: 40px;
+
+/*  Layout
+ *  ─────────────────────────────────── */
+// header
+$header-height: 85px;
+
+/*  Colors
+ *  ─────────────────────────────────── */
+// general
+$white: #ffffff;
+$black: #000000;
+$light-grey: #e9ecef;
+$slate-grey: #495057;
+$primary: #343a40;
+
+// mtg
+$forest-light: #96f2d7;
+$forest-dark: #12b886;
+$island-light: #74c0fc;
+$island-dark: #228be6;
+$mountain-light: #ff8787;
+$mountain-dark: #ea4b12;
+$plains-light: #fff3bf;
+$plains-dark: #ffe066;
+$swamp-light: #f8f9fa;
+$swamp-dark: #212529;
+$swamp-ultra-dark: #0b0b0b;
