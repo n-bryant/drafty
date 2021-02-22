@@ -30,7 +30,7 @@ $spacing-10: 40px;
 /*  Layout
  *  ─────────────────────────────────── */
 // header
-$header-height: 85px;
+$header-height: 48px;
 
 /*  Colors
  *  ─────────────────────────────────── */
@@ -53,3 +53,10 @@ $plains-dark: #ffe066;
 $swamp-light: #f8f9fa;
 $swamp-dark: #212529;
 $swamp-ultra-dark: #0b0b0b;
+
+/*  Typography
+ *  ─────────────────────────────────── */
+// font-weights
+$font-weight-light: 100;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
