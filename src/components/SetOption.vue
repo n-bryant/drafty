@@ -41,11 +41,11 @@ export default {
       hovering: false,
       actions: [
         {
-          to: { name: "draft-set", params: { set: this.set.code } },
+          to: { name: "draft-set", params: { code: this.set.code } },
           label: "Draft"
         },
         {
-          to: { name: "sealed-set", params: { set: this.set.code } },
+          to: { name: "sealed-set", params: { code: this.set.code } },
           label: "Sealed"
         }
       ]
