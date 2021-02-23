@@ -1,7 +1,7 @@
 <template>
   <header id="app-header">
     <nav id="nav">
-      <router-link to="/">
+      <router-link label="home" to="/">
         <div id="logo">
           <h1 class="app-title">Drafty</h1>
           <div class="icon-wrapper">

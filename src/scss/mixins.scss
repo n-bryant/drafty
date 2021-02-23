@@ -44,3 +44,49 @@
 @mixin fillShift {
   transition: fill 0.25s ease;
 }
+
+@mixin transitionAll {
+  transition: all 0.25s ease;
+}
+
+@mixin fade {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 1.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+}
+
+@mixin slideIn {
+  .slide-in {
+    &-move {
+      transition: opacity 0.5s linear, transform 0.5s ease-in-out;
+    }
+
+    &-leave-active {
+      transition: opacity 0.4s linear,
+        transform 0.4s cubic-bezier(0.5, 0, 0.7, 0.4); //cubic-bezier(.7,0,.7,1);
+      transition-delay: calc(0.1s * (var(--total) - var(--i)));
+    }
+
+    &-enter-active {
+      transition: opacity 0.5s linear,
+        transform 0.5s cubic-bezier(0.2, 0.5, 0.1, 1);
+      transition-delay: calc(0.1s * var(--i));
+    }
+
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+
+    &-enter {
+      transform: translateY(1em);
+    }
+    &-leave-to {
+      transform: translateY(-1em);
+    }
+  }
+}
