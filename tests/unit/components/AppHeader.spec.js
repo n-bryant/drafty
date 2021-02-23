@@ -1,17 +1,13 @@
-import { shallowMount } from "@vue/test-utils";
+import { render, screen } from "@testing-library/vue";
 import AppHeader from "@/components/AppHeader.vue";
 
 describe("AppHeader.vue", () => {
   it("should render successfully", () => {
-    shallowMount(AppHeader, {
-      stubs: ["router-link"]
-    });
+    render(AppHeader, { stubs: ["router-link", "PackIcon"] });
   });
 
   it("should render the logo", () => {
-    const wrapper = shallowMount(AppHeader, {
-      stubs: ["router-link"]
-    });
-    expect(wrapper.find(".app-title").text()).toBe("Drafty");
+    render(AppHeader, { stubs: ["router-link", "PackIcon"] });
+    screen.getByText("Drafty");
   });
 });
