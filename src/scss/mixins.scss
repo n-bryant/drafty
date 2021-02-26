@@ -126,12 +126,3 @@
     }
   }
 }
-
-@mixin fan($count, $angle) {
-  @for $i from 1 through $count {
-    div:nth-child(#{$i}) {
-      transform: translate(-50%, -50%)
-        rotate(-$angle / 2 + $angle / ($count + 1) * $i);
-    }
-  }
-}
