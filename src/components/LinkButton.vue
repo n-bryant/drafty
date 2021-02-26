@@ -27,7 +27,6 @@ export default {
 <style lang="scss" scoped>
 #link-button {
   color: $swamp-light;
-  text-decoration: none;
   padding: 8px;
   margin-bottom: 8px;
   background-color: rgba(0, 0, 0, 0.65);
@@ -45,5 +44,5 @@ export default {
   }
 }
 
-@include fade;
+@include fade(0.25s);
 </style>

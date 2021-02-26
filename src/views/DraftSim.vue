@@ -1,20 +1,9 @@
 <template>
-  <div id="draft-sim">sim placeholder</div>
+  <div></div>
 </template>
 
 <script>
-export default {
-  props: {
-    set: {
-      type: Object,
-      required: true
-    }
-  }
-};
+export default {};
 </script>
 
-<style lang="scss" scoped>
-#draft-sim {
-  color: $swamp-light;
-}
-</style>
+<style lang="scss" scoped></style>

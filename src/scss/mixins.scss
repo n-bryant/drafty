@@ -35,6 +35,23 @@
   }
 }
 
+/*  Layout
+ *  ─────────────────────────────────── */
+@mixin absoluteContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
 /*  Transitions
  *  ─────────────────────────────────── */
 @mixin colorShift {
@@ -49,10 +66,10 @@
   transition: all 0.25s ease;
 }
 
-@mixin fade {
+@mixin fade($duration) {
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity 1.5s;
+    transition: opacity $duration;
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
@@ -87,6 +104,34 @@
     }
     &-leave-to {
       transform: translateY(-1em);
+    }
+  }
+}
+
+@mixin float {
+  animation: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-$spacing-4);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
+}
+
+@mixin fan($count, $angle) {
+  @for $i from 1 through $count {
+    div:nth-child(#{$i}) {
+      transform: translate(-50%, -50%)
+        rotate(-$angle / 2 + $angle / ($count + 1) * $i);
     }
   }
 }

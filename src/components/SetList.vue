@@ -40,18 +40,17 @@ export default {
 <style lang="scss" scoped>
 #set-list {
   flex-grow: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  @include absoluteContainer;
+  @include flexCenter(row);
 
   .list-wrapper {
     flex-grow: 1;
+    padding-top: $spacing-3;
+
+    @include lg {
+      padding-top: 0;
+    }
 
     h2 {
       text-transform: uppercase;
@@ -62,15 +61,13 @@ export default {
 
   ul {
     flex-grow: 1;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    @include flexCenter(row);
+    max-width: $screen-xl-min;
+    margin: 0 auto 48px;
   }
 }
 
-@include fade;
+@include fade(1.5s);
 @include slideIn;
 </style>
