@@ -40,13 +40,17 @@ export default {
     return {
       hovering: false,
       actions: [
+        // {
+        //   to: { name: "draft-set", params: { code: this.set.code } },
+        //   label: "Draft"
+        // },
+        // {
+        //   to: { name: "sealed-set", params: { code: this.set.code } },
+        //   label: "Sealed"
+        // },
         {
-          to: { name: "draft-set", params: { code: this.set.code } },
-          label: "Draft"
-        },
-        {
-          to: { name: "sealed-set", params: { code: this.set.code } },
-          label: "Sealed"
+          to: { name: "pack-set", params: { code: this.set.code } },
+          label: "Open Pack"
         }
       ]
     };
@@ -59,13 +63,20 @@ export default {
   line-height: 1.2;
   vertical-align: top;
   width: 80%;
-  margin: $spacing-2 $spacing-0 $spacing-2 $spacing-5;
+  margin: $spacing-2 $spacing-0;
 
   @include md {
     width: 42%;
+    &:nth-of-type(2n) {
+      margin-left: $spacing-5;
+    }
   }
   @include lg {
     width: calc(20% - #{$spacing-5} - #{$spacing-2});
+    margin-left: $spacing-5;
+    &:first-of-type {
+      margin-left: $spacing-0;
+    }
   }
 }
 
@@ -81,14 +92,8 @@ export default {
 .option-portrait {
   height: 100%;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  @include absoluteContainer;
+  @include flexCenter(row);
 }
 
 .setImage {
@@ -120,8 +125,12 @@ export default {
 
 .actions {
   position: absolute;
+  min-width: 124px;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
-  top: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
